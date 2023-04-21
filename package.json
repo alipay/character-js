@@ -1,6 +1,6 @@
 {
   "name": "ant-character-js",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A function to match all Emoji-only symbols as per the Unicode Standard.",
   "scripts": {
     "build": "rimraf lib && rollup -c",
@@ -17,6 +17,13 @@
     "lib/",
     "index.js"
   ],
+  "husky": {
+    "hooks": {
+      "pre-push": "./pre-push.js",
+      "pre-commit": "lint-staged",
+      "commit-msg": "node scripts/pre-push.js $HUSKY_GIT_PARAMS && commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
   "keywords": [
     "unicode",
     "regex",
@@ -45,7 +52,12 @@
     "@rollup/plugin-babel": "^6.0.3",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "core-js": "^3.29.1",
+    "rimraf": "^4.4.1",
     "rollup": "^2.0",
+    "eslint": "^8.37.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-eslint": "^7.0.0",
