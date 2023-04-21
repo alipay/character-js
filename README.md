@@ -2,6 +2,7 @@
 1. 支持Emoji识别
 2. 支持子素簇边界拆分（Grapheme Cluster Boundary）
 
+科普：[关于 Emoji 你不知道的事](https://www.yuque.com/antfe/featured/meaiwxzy9h4ztshl)
 ### Emoji识别
 提供了从一段字符串中识别emoji的函数，还提供了一个匹配emoji的正则表达式。它符合Unicode标准，是基于Unicode 15.0  [_Unicode® Technical Standard #51_](https://unicode.org/reports/tr51/)规则封装的。
 它的大小只有3k。

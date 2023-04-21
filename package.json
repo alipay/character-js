@@ -1,6 +1,6 @@
 {
   "name": "ant-character-js",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A function to match all Emoji-only symbols as per the Unicode Standard.",
   "scripts": {
     "build": "rimraf lib && rollup -c",
